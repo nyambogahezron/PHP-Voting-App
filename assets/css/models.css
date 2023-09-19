@@ -1,0 +1,152 @@
+
+ .input-field, form .button{
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+  font-size: 19px;
+  transition: .4s;
+}
+input:focus{
+  border: 1px solid #1DA1F2;
+}
+.input-field label, span.show{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-field label{
+  left: 15px;
+  pointer-events: none;
+  color: grey;
+  font-size: 18px;
+  transition: .4s;
+}
+span.show{
+  right: 20px;
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  visibility: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+input:valid ~ span.show{
+  visibility: visible;
+}
+input:focus ~ label,
+input:valid ~ label{
+  transform: translateY(-33px);
+  background: white;
+  font-size: 16px;
+  color: #1DA1F2;
+}
+ 
+ .model-close{
+   position: absolute;
+   top: 0;
+   right: 10px;
+   padding: 20px 10px;
+   
+ }
+ 
+  .modal-btn{
+    
+    color: blue;
+    
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 233, 86, 0.5);
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    z-index: -10;
+  }
+  .open-modal {
+    visibility: visible;
+    z-index: 10;
+  }
+ 
+  .modal-container{
+    background: #fff;
+    border-radius: 0.5rem;
+    width: 90vw;
+    height: 80%;
+    max-width: 620px;
+    top: 10px;
+    left: 110px;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .modal-edit{
+    background: #fff;
+    border-radius: 0.5rem;
+    width: 90vw;
+    height: 80%;
+    max-width: 80%;
+    top: 5px;
+    left: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .modal-edit .title{
+    border-bottom: 2px solid green;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    color: green;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .modal-edit form{
+    width: 600px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2.3rem;
+    background: transparent;
+    border-color: transparent;
+    color: red;
+    cursor: pointer;
+    
+  }
+  .close-btn:hover {
+    color: hsl(360, 71%, 66%);
+    transform: scale(1.3);
+  }
+  .errorsMsg{
+    height: auto;
+    width: 100%;
+    background: #fff;
+  }
+  .errorsMsg span{
+    color: #c51a1a;
+   font-weight: 800;
+  } 
+  .deleteBtn {
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+  }
+  .table{
+    z-index: 10;
+    visibility: visible;
+  }
